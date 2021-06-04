@@ -6,6 +6,7 @@ import { AddressInfo } from "net";
 import { PostStudent } from "./endpoints/PostStudent";
 import { PostTeacher } from "./endpoints/PostTeacher";
 import { PostClass } from "./endpoints/PostClass";
+import { UpdateStudent } from "./endpoints/UpdateStudent";
 import { student, teacher, Class } from "./types/Types";
 
 dotenv.config();
@@ -28,6 +29,7 @@ app.use(cors());
 app.post('/student', PostStudent)
 app.post('/teacher', PostTeacher)
 app.post('/class', PostClass)
+app.put('/student', UpdateStudent)
 
 app.get(
   "/alunos/all",
