@@ -1,0 +1,31 @@
+###PostStudent
+POST http://localhost:3003/student
+Content-Type: application/json
+
+{
+    "name": "Sergio",
+    "email": "sergio@email.com",
+    "birth_date": "1996-09-21"
+}
+
+###PostTeacher
+POST http://localhost:3003/teacher
+Content-Type: application/json
+
+{
+    "name": "Mateus",
+    "email": "mateus@email.com",
+    "birth_date": "1990-10-09"
+}
+
+###PostClass
+POST http://localhost:3003/class
+Content-Type: application/json
+
+{
+    "name": "Cruz",
+    "start_date": "2021-01-25",
+    "end_date": "2021-07-27",
+    "module": "4",
+    "period": "day"
+}
