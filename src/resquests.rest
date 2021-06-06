@@ -47,3 +47,6 @@ Content-Type: application/json
     "id": "9",
     "class_id": "7"
 }
+
+###GetStudentByAge
+GET http://localhost:3003/student/2

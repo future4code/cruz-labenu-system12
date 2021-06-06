@@ -8,6 +8,7 @@ import { PostTeacher } from "./endpoints/PostTeacher";
 import { PostClass } from "./endpoints/PostClass";
 import { UpdateStudent } from "./endpoints/UpdateStudent";
 import { UpdateTeacher } from "./endpoints/UpdateTeacher";
+import { GetAgeStudent } from "./endpoints/GetAgeStudent";
 import { student, teacher, Class } from "./types/Types";
 
 dotenv.config();
@@ -32,6 +33,7 @@ app.post("/teacher", PostTeacher);
 app.post("/class", PostClass);
 app.put("/student", UpdateStudent);
 app.put("/teacher", UpdateTeacher);
+app.get("/student/:id", GetAgeStudent);
 
 app.get(
   "/alunos/all",
