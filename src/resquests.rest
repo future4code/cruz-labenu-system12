@@ -50,3 +50,30 @@ Content-Type: application/json
 
 ###GetStudentByAge
 GET http://localhost:3003/student/2
+
+###GetStudentByClass
+GET http://localhost:3003/student/class/1
+
+###GetTeacherByClass
+GET http://localhost:3003/teacher/class/1
+
+###GetStudentByHobby
+GET http://localhost:3003/student/hobby/1
+
+###RemoveStudentFromClass
+PUT http://localhost:3003/student/1
+
+###DeleteStudent
+DELETE http://localhost:3003/student/1
+
+###RemoveTeacherFromClass
+PUT http://localhost:3003/teacher/1
+
+###UpdateClassInStudent
+PUT http://localhost:3003/student/class
+Content-Type: application/json
+
+{
+    "id": "2",
+    "class_id": "1"
+}

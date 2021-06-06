@@ -9,7 +9,13 @@ import { PostClass } from "./endpoints/PostClass";
 import { UpdateStudent } from "./endpoints/UpdateStudent";
 import { UpdateTeacher } from "./endpoints/UpdateTeacher";
 import { GetAgeStudent } from "./endpoints/GetAgeStudent";
-import { student, teacher, Class } from "./types/Types";
+import { GetStudentByClass } from "./endpoints/GetStudentByClass";
+import { GetTeacherByClass } from "./endpoints/GetTeacherByClass";
+import { GetStudentsHobby } from "./endpoints/GetStudentsHobby";
+import { RemoveStudentFromClass } from "./endpoints/RemoveStudentFromClass";
+import { DeleteStudent } from "./endpoints/DeleteStudent";
+import { RemoveTeacherFromClass } from "./endpoints/RemoveTeacherFromClass";
+import { UpdateClassInStudent } from "./endpoints/UpdateClassInStudent";
 
 dotenv.config();
 
@@ -33,7 +39,16 @@ app.post("/teacher", PostTeacher);
 app.post("/class", PostClass);
 app.put("/student", UpdateStudent);
 app.put("/teacher", UpdateTeacher);
+app.put("/student/class", UpdateClassInStudent);
+app.put("/student/:id", RemoveStudentFromClass);
+app.put("/teacher/:id", RemoveTeacherFromClass);
 app.get("/student/:id", GetAgeStudent);
+app.get("/student/class/:id", GetStudentByClass);
+app.get("/teacher/class/:id", GetTeacherByClass);
+app.get("/student/hobby/:id", GetStudentsHobby);
+app.delete("/student/:id", DeleteStudent);
+
+/*
 
 app.get(
   "/alunos/all",
@@ -103,6 +118,8 @@ app.get(
     }
   }
 );
+
+*/
 
 const server = app.listen(process.env.PORT || 3003, () => {
   if (server) {
