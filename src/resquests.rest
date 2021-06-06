@@ -29,3 +29,12 @@ Content-Type: application/json
     "module": "4",
     "period": "day"
 }
+
+###UpdateStudent
+PUT http://localhost:3003/student
+Content-Type: application/json
+
+{
+    "id": "5",
+    "class_id": "5"
+}
