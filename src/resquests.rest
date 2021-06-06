@@ -38,3 +38,12 @@ Content-Type: application/json
     "id": "5",
     "class_id": "5"
 }
+
+###UpdateTeacher
+PUT http://localhost:3003/teacher
+Content-Type: application/json
+
+{
+    "id": "9",
+    "class_id": "7"
+}
