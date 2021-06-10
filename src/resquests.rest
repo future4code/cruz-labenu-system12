@@ -1,0 +1,79 @@
+###PostStudent
+POST http://localhost:3003/student
+Content-Type: application/json
+
+{
+    "name": "Sergio",
+    "email": "sergio@email.com",
+    "birth_date": "1996-09-21"
+}
+
+###PostTeacher
+POST http://localhost:3003/teacher
+Content-Type: application/json
+
+{
+    "name": "Mateus",
+    "email": "mateus@email.com",
+    "birth_date": "1990-10-09"
+}
+
+###PostClass
+POST http://localhost:3003/class
+Content-Type: application/json
+
+{
+    "name": "Cruz",
+    "start_date": "2021-01-25",
+    "end_date": "2021-07-27",
+    "module": "4",
+    "period": "day"
+}
+
+###UpdateStudent
+PUT http://localhost:3003/student
+Content-Type: application/json
+
+{
+    "id": "5",
+    "class_id": "5"
+}
+
+###UpdateTeacher
+PUT http://localhost:3003/teacher
+Content-Type: application/json
+
+{
+    "id": "9",
+    "class_id": "7"
+}
+
+###GetStudentByAge
+GET http://localhost:3003/student/2
+
+###GetStudentByClass
+GET http://localhost:3003/student/class/1
+
+###GetTeacherByClass
+GET http://localhost:3003/teacher/class/1
+
+###GetStudentByHobby
+GET http://localhost:3003/student/hobby/1
+
+###RemoveStudentFromClass
+PUT http://localhost:3003/student/1
+
+###DeleteStudent
+DELETE http://localhost:3003/student/1
+
+###RemoveTeacherFromClass
+PUT http://localhost:3003/teacher/1
+
+###UpdateClassInStudent
+PUT http://localhost:3003/student/class
+Content-Type: application/json
+
+{
+    "id": "2",
+    "class_id": "1"
+}
